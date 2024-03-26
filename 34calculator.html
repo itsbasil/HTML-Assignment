@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="./calculator.js" type="text/javascript"></script>
+        <title>Document</title>
+
+       <style>
+         .container{border: 1px solid #cccccc;
+                    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+                    position: absolute;
+                    top: 10%;
+                     left: 35%;
+                     transform: translate(-50,-50);
+                     width: 450px;
+                     height: 400px;
+                     }
+          .keys{display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 10px;
+                padding: 10px;
+                margin: auto;
+               } 
+           .button{height: 60px;
+                   padding: 5px;
+                   background-color: #ffff;
+                   border-radius: 3px;
+                   border: 1px solid#c4c4c4;
+                   background-color: transparent;
+                   font-size: 2rem;
+                   color: #333;
+                   background-image: linear-gradient(to bottom transparent 50% rgba(0,0,0,0.04));
+                   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5),inset 0 1px 0 0 rgba(255,255,255,.45),inset 0 -px 0 0 rgba(255,255,255,.15), 0,ipx, 0,0 rgba(255,255,255,.15);
+                   text-shadow: 0 1px rgba(255,255,255,.4);
+                
+                   }
+            .button:hover{background-color: #eaeaea;
+                         }    
+            .operator{color: #ffff;
+                      background-color: #f17377;
+                      }
+                      
+            .clear{background-color: #b0353a;
+                   border-color: #b0353a;
+                   color: #fff;
+                   width:80px; 
+                   height: 30px;
+                
+                  }  
+            .clear:hover{background-color: #f17377;
+                        }
+            .equal-sign {background-color: #25a8e0;
+                        border-color: #25a8e0;
+                        color: #fff;
+                         }
+
+            .equal-sign:hover{background-color: #4e9ed4;
+
+                             }
+            .screen      {background-color: rgb(171,219,231);
+                         justify-content: left;
+                         color: black;
+                         font-size: medium;
+                         width: 50%;
+                         height: 30%;
+                         cursor: default;
+                         padding: 10px;
+                         padding-left: 40%;
+                         margin: auto;
+                         margin-bottom: 10px;
+                         
+                        }
+
+                                       
+                          
+                    </style>
+                    </head>
+                    <body>
+                        <h1 style="text-align: center">calculator</h1>
+                    <div class="container">
+                        <br></br>
+                        
+                        <table>
+                            <tr>
+                                <td colspan="3"><input type="text" id="result" class="screen" style="text-align: right;"></td>
+                            <td> <input type="button" value="C" onclick="clearscreen()" class="clear"/></td>
+                            </tr>
+                        </table>
+                        <div class="keys">
+
+                            <input type="button" value="7" class="button" onclick="display('7')"></input>
+                            <input type="button" value="8" class="button" onclick="display('8')"></input>
+                            <input type="button" value="9" class="button" onclick="display('9')"></input>
+                            <input type="button" value="/" class="operator" onclick="display('/')"></input>
+                            <input type="button" value="4" class="button" onclick="display('4')"></input>
+                            <input type="button" value="5" class="button" onclick="display('5')"></input>
+                            <input type="button" value="6" class="button" onclick="display('6')"></input>
+                            <input type="button" value="" class="operator" onclick="display('')"></input>
+                            <input type="button" value="1" class="button" onclick="display('1')"></input>
+                            <input type="button" value="2" class="button" onclick="display('2')"></input>
+                            <input type="button" value="3" class="button" onclick="display('3')"></input>
+                            <input type="button" value="-" class="operator" onclick="display('-')"></input>
+                            <input type="button" value="0" class="button" onclick="display('0')"></input>
+                            <input type="button" value="." class="button" onclick="display('.')"></input>
+                            <input type="button" value="=" class="button equal-sign" onclick="solve()"></input>
+                            <input type="button" value="+" class="operator" onclick="display('+')"></input>
+                            
+
+                    </div>
+                    </div>
+                    
+                    </body>
+</html>
